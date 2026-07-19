@@ -1,0 +1,707 @@
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+.add-opportunity-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+.add-opportunity-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.opportunity-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.opportunity-card h3 {
+    margin-bottom: 20px;
+    color: rgb(22, 22, 87);
+}
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: rgb(22, 22, 87) !important;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+    color: rgb(22, 22, 87) !important;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+
+.products-section {
+    margin-top: 35px;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.products-header h3 {
+    margin: 0;
+}
+
+.add-product-btn {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.add-product-btn:hover {
+    background: #1d4ed8;
+}
+
+.products-table-wrapper {
+    overflow-x: auto;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.products-table th {
+    background: #f1f5f9;
+    padding: 12px;
+    text-align: left;
+}
+
+.products-table td {
+    padding: 12px;
+    border-top: 1px solid #eee;
+}
+
+.products-table tr:hover {
+    background: #fafafa;
+}
+
+.total-cell {
+    font-weight: bold;
+    color: #16a34a;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 8px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.edit-btn {
+    color: blueviolet;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background: rgb(211, 204, 204);
+}
+
+.delete-row-btn {
+    color: #dc2626;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-row-btn:hover {
+    background: rgb(211, 204, 204);
+}
+
+.save-btn {
+    background: blue !important;
+    color: white !important;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cancel-btn {
+    color: rgb(22, 22, 87);
+    border: 1px solid rgb(22, 22, 87,0.5);
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.imp{
+    color:red !important;
+}
+/* =========================
+   FORM ACTIONS
+========================= */
+
+.form-actions {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+ 
+}
+
+.Won-lost-btn {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.won-btn {
+    background: #16a34a !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.lost-btn {
+    background: red !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.won-btn:hover {
+    background: #10853b;
+}
+
+.lost-btn:hover {
+    background: rgb(177, 38, 38);
+}
+
+.final-btn {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+/* =========================
+   GRAND TOTAL CARD
+========================= */
+
+.amount-summary-section {
+    margin-top: 30px;
+}
+
+.amount-summary-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ecfdf5;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.amount-summary-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.amount-label {
+    font-size: 14px;
+    color: #555;
+}
+
+.amount-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+.view-details-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.view-details-btn:hover {
+    background: #1d4ed8;
+}
+
+/* =========================
+   MODAL OVERLAY
+========================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* =========================
+   PRODUCT MODAL
+========================= */
+
+.product-modal,
+.amount-modal {
+    background: white;
+    width: 90%;
+    max-width: 750px;
+    border-radius: 14px;
+    overflow: hidden;
+    animation: popup 0.2s ease;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: rgb(22, 22, 87);
+}
+
+.close-modal-btn {
+    border: none;
+    background: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: rgb(22, 22, 87);
+}
+
+.form-row input,
+.form-row select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: rgb(22, 22, 87);
+}
+
+.form-row-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 18px;
+    border-top: 1px solid #eee;
+}
+
+/* FIXED BUTTON STYLES FOR PRODUCT MODAL */
+.modal-save-btn,
+.competitor-modal-save-btn {
+    background: blue !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 18px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+}
+
+.modal-save-btn:hover,
+.competitor-modal-save-btn:hover {
+    background: #1d4ed8 !important;
+}
+
+.modal-cancel-btn,
+.modal-close-btn,
+.competitor-modal-cancel-btn {
+    background: #fff !important;
+    color: rgb(22, 22, 87) !important;
+    border: 1px solid rgb(22, 22, 87) !important;
+    padding: 10px 18px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+}
+
+.modal-cancel-btn:hover,
+.modal-close-btn:hover,
+.competitor-modal-cancel-btn:hover {
+    background: #f1f5f9 !important;
+}
+
+/* =========================
+   AMOUNT DETAILS MODAL
+========================= */
+
+.amount-details-table-wrapper {
+    overflow-x: auto;
+}
+
+.amount-details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.amount-details-table th {
+    background: #f1f5f9;
+    padding: 10px;
+}
+
+.amount-details-table td {
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.discount-cell {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.tax-cell {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.row-total-cell {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+/* =========================
+   SUMMARY BREAKDOWN
+========================= */
+
+.amount-summary-breakdown {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-label {
+    font-weight: 600;
+}
+
+.summary-value {
+    font-weight: 500;
+}
+
+.discount-row .summary-value {
+    color: #dc2626;
+}
+
+.tax-row .summary-value {
+    color: #2563eb;
+}
+
+.grand-total-row {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+}
+
+.grand-total-label {
+    font-size: 18px;
+}
+
+.grand-total-value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+.amount-summary-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.summary-card {
+    flex: 1;
+    min-width: 180px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.summary-card h4 {
+    margin-bottom: 10px;
+    color: rgb(22, 22, 87) !important;
+    font-size: 14px;
+}
+
+.summary-card p {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(22, 22, 87);
+}
+
+.grand-total-card {
+    background: #f0f7ff;
+    border: 2px solid #1d4ed8 !important;
+}
+
+.competitor-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.competitor-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 18px;
+    border-top: 1px solid #eee;
+}
+
+.competitor-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+/* =========================
+   COMPETITOR MODAL
+========================= */
+
+.competitor-modal {
+    background: white;
+    width: 90%;
+    max-width: 650px;
+    border-radius: 14px;
+    overflow: hidden;
+    animation: popup 0.2s ease;
+}
+
+.competitor-modal .modal-header {
+    background: #f8fafc;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.competitor-modal .modal-header h3 {
+    margin: 0;
+    color: rgb(22, 22, 87);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.competitor-modal .modal-body {
+    padding: 24px;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.competitor-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px;
+    margin-bottom: 12px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.competitor-item:hover {
+    background: #f8fafc;
+    border-color: #2563eb;
+}
+
+.competitor-item input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.competitor-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.competitor-name {
+    font-weight: 700;
+    color: rgb(22, 22, 87);
+}
+
+.competitor-product {
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.competitor-modal .modal-buttons {
+    justify-content: flex-end;
+}
+
+.competitor-modal .modal-cancel-btn {
+    min-width: 120px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row-double {
+        grid-template-columns: 1fr;
+    }
+
+    .products-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .amount-summary-card {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .actions-cell {
+        flex-direction: column;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .Won-lost-btn,
+    .final-btn {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .Won-lost-btn button,
+    .final-btn button {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,196 @@
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+.contact-form-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+.contact-form-card {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.contact-form-card form {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   FORM SECTIONS
+========================= */
+
+.form-section {
+    background: #fff;
+    border: 1px solid #eef2f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(22,22,87) !important;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color:rgb(22,22,87) !important;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+    transition: all 0.2s ease;
+    color: rgb(22,22,87);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: blue;
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.12);
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+::placeholder{
+    color: rgb(22,22,87,0.7);
+}
+
+.imp{
+    color: red;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.cancel-btn {
+    background: white !important;
+    color: rgb(22,22,87) !important;
+    border: 1px solid rgb(22,22,87,0.5) !important;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.cont-save-btn {
+    background: blue !important;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.save-btn:hover {
+    background: rgb(109, 41, 173);
+}
+
+.form-buttons button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =========================
+   REQUIRED FIELD
+========================= */
+
+.required {
+    color: red;
+    margin-left: 3px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .contact-form-card {
+        padding: 15px;
+    }
+
+    .contact-form-card form {
+        padding: 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .cancel-btn,
+    .save-btn {
+        width: 100%;
+    }
+}

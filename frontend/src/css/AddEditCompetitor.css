@@ -1,0 +1,423 @@
+/* =========================
+   LAYOUT
+========================= */
+
+.add-competitor-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+.add-competitor-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* =========================
+   FORM WRAPPER
+========================= */
+
+.competitor-form {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* =========================
+   SECTION CARD
+========================= */
+
+.form-section {
+    background: #ffffff;
+    border: 1px solid #eef2f7;
+    border-radius: 10px;
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-section {
+    grid-column: span 1;
+}
+
+/* SWOT + Product Mapping + Form Actions = full width */
+.form-section:nth-child(3),
+.form-section:nth-child(4) {
+    grid-column: 1 / -1;
+}
+
+/* Product Mappings section (outside form, below it) */
+.form-section.product-mappings-section {
+    background: #ffffff;
+    border: 1px solid #eef2f7;
+    border-radius: 10px;
+    padding: 18px;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.form-section h3,
+.form-section.product-mappings-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(22, 22, 87);
+
+    margin: 0 0 10px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+label {
+    color: rgb(22, 22, 87);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+    width: 100%;
+
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+
+    font-size: 14px;
+    color: rgb(22, 22, 87);
+
+    outline: none;
+    transition: 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+    border-color: blue;
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.12);
+}
+
+.form-section textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.comp-cancel-btn{
+    border: 1px solid rgb(22, 22, 87,0.5) !important;
+}
+
+/* =========================
+   SWOT TEXTAREAS
+========================= */
+
+.form-section textarea[name="strength"],
+.form-section textarea[name="weakness"] {
+    min-height: 120px;
+}
+
+/* =========================
+   MAPPING ROWS
+========================= */
+
+.mapping-row {
+    display: grid;
+    grid-template-columns:
+        minmax(150px, 1fr) minmax(180px, 1fr) minmax(220px, 1.5fr) auto;
+    gap: 10px;
+    align-items: center;
+
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fafbff;
+
+    margin-bottom: 10px;
+}
+
+.mapping-row--editing {
+    background: #f0f4ff;
+    border: 1.5px solid #a5b4fc;
+}
+
+.mapping-row--new {
+    background: #f0f4ff;
+    border: 1px dashed #a5b4fc;
+}
+
+.mapping-row input,
+.mapping-row select {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 7px;
+    border: 1px solid #dcdcdc;
+    font-size: 13px;
+    color: rgb(22, 22, 87);
+    outline: none;
+    transition: 0.2s ease;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.mapping-row select:focus,
+.mapping-row input:focus {
+    border-color: blue;
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.10);
+}
+
+/* View-mode cells */
+.mapping-cell {
+    font-size: 13.5px;
+    color: rgb(22, 22, 87);
+    padding: 4px 2px;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+}
+
+.empty-val {
+    color: #adb5bd;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.product-mappings-section {
+    margin-top: 24px;
+}
+
+.product-mappings-section .mapping-row:last-child {
+    margin-bottom: 0;
+}
+
+.no-mappings-text,
+.no-mapping-text {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* =========================
+   MAPPING ROW BUTTONS
+========================= */
+
+/* =========================
+   ICON BUTTONS (save / delete in mapping rows)
+========================= */
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    flex-shrink: 0;
+}
+
+.save-btn {
+    background: white !important;
+    color: #5b21b6;
+}
+
+.delete-btn {
+    background: white !important;
+    color: #dc2626;
+}
+
+
+.mapping-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* Legacy text-based btn-danger (kept for safety) */
+.btn-danger {
+    width: 80px;
+    height: 40px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 8px;
+    background: #fee2e2;
+    color: #dc2626;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+/* =========================
+   ADD ANOTHER PRODUCT BUTTON
+========================= */
+
+.btn-add-row {
+    align-self: flex-start;
+    margin-top: 4px;
+
+    background: transparent;
+    border: 1.5px solid blue;
+    color: blue;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-add-row:hover {
+    background: #f5f3ff;
+    border-color: blue;
+    color: blue;
+}
+
+/* =========================
+   ADD MAPPING BUTTON
+========================= */
+
+.add-mapping-btn {
+    width: 100px;
+    height: 40px;
+    padding: 0 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: blue;
+    color: white;
+
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.add-mapping-btn:hover {
+    background: #0000cc;
+}
+
+/* =========================
+   ACTION BUTTONS (form footer)
+========================= */
+
+.form-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: flex-end !important;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #eef2f7;
+}
+
+.form-actions button {
+    width: 160px;
+    height: 44px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.form-actions button[type="button"] {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.form-actions button[type="button"]:hover {
+    background: #d1d5db;
+}
+
+.form-actions button[type="submit"] {
+    background: blue;
+    color: white;
+}
+
+.form-actions button[type="submit"]:hover {
+    background: #0000cc;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .add-competitor-container {
+        padding: 15px;
+    }
+
+    .competitor-form {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .form-section,
+    .form-section:nth-child(3),
+    .form-section:nth-child(4) {
+        grid-column: 1 / -1;
+    }
+
+    .mapping-row {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .mapping-row .mapping-cell,
+    .mapping-row input,
+    .mapping-row select {
+        grid-column: span 2;
+    }
+
+    .mapping-row .save-btn,
+    .mapping-row .delete-btn {
+        grid-column: span 1;
+        width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+}

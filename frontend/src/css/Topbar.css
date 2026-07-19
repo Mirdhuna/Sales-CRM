@@ -1,0 +1,114 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 25px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+
+/* LEFT */
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.menu-icon {
+    font-size: 18px;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.topbar-left h2 {
+    font-size: 22px;
+    color: rgb(22,22,87);
+}
+
+
+
+/* RIGHT */
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+
+/* ICONS */
+
+.icon-container {
+    position: relative;
+}
+
+.top-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: rgb(22,22,87);
+}
+
+
+.notification-badge {
+    position: absolute;
+
+    top: -8px;
+    right: -10px;
+
+    background-color: red;
+    color: white;
+
+    font-size: 10px;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbar-right img {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+}
+
+.profile-info h4 {
+    margin: 0;
+    font-size: 14px;
+    color:rgb(22,22,87);
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 12px;
+    color: rgb(22,22,87);
+}
+
+.logbtn{
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+    width: 60px;
+    border: none;
+    font-weight: 600;
+    background: blue;
+    cursor: pointer;
+}

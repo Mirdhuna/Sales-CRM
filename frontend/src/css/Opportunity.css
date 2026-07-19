@@ -1,0 +1,200 @@
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f6fa;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.opportunity-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.opportunity-content,
+.leads-container {
+    flex: 1;
+    padding: 20px;
+    overflow-x: hidden;
+    min-width: 0;
+}
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+
+.opportunity-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e6e8ec;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.opportunity-table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+
+.opportunity-table thead {
+    background: #f8f9fb;
+}
+
+.opportunity-table th {
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: rgb(22, 22, 87);
+    font-weight: 600;
+    border-bottom: 1px solid #e6e8ec;
+    white-space: nowrap;
+}
+
+.opportunity-table td {
+    padding: 12px 14px;
+    font-size: 14px;
+    color: rgb(22, 22, 87);
+    border-bottom: 1px solid #f1f1f1;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.opportunity-table tbody tr:hover {
+    background: #fafafa;
+}
+
+/* =========================
+   FIRST COLUMN
+========================= */
+
+.opportunity-name,
+.first-col {
+    color: blue !important;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-open {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.status-won {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-lost {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.status-pending {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn.edit {
+    color: #6d28d9;
+}
+
+.icon-btn.delete {
+    color: #dc2626;
+}
+
+.icon-btn:hover {
+    background: #f3f4f6;
+}
+
+/* =========================
+   TABLE SCROLLBAR
+========================= */
+
+.opportunity-table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.opportunity-table-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.opportunity-table-wrapper::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 10px;
+}
+
+.opportunity-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #9e9e9e;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .leads-container,
+    .opportunity-content {
+        padding: 12px;
+    }
+
+    .opportunity-table {
+        min-width: 900px;
+    }
+
+    .icon-btn {
+        width: 32px;
+        height: 32px;
+    }
+}

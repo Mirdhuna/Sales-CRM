@@ -1,0 +1,222 @@
+/* ================= MAIN FORM ================= */
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+/* ================= FORM SECTION ================= */
+
+.account-form-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+/* ================= SECTION TITLE ================= */
+
+.account-form-section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(22,22,87);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* ================= GRID ================= */
+
+.account-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+/* ================= FORM GROUP ================= */
+
+.account-form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ================= LABEL ================= */
+
+.account-form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(22,22,87);
+    margin-bottom: 8px;
+}
+
+.account-form-group label span {
+    color: #ef4444;
+}
+
+/* ================= INPUTS ================= */
+
+.account-form-group input,
+.account-form-group select,
+.account-form-group textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    background: #ffffff;
+    color: rgb(22,22,87);
+    transition: 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* ================= PLACEHOLDER ================= */
+
+.account-form-group input::placeholder,
+.account-form-group textarea::placeholder {
+    color: rgb(22,22,87,0.7)
+}
+
+/* ================= HOVER ================= */
+
+.account-form-group input:hover,
+.account-form-group select:hover,
+.account-form-group textarea:hover {
+    border-color: #9ca3af;
+}
+
+/* ================= FOCUS ================= */
+
+.account-form-group input:focus,
+.account-form-group select:focus,
+.account-form-group textarea:focus {
+    border-color:rgb(22,22,87);
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.12);
+}
+
+/* ================= DISABLED ================= */
+
+.account-form-group input:disabled {
+    background: #f9fafb;
+    cursor: not-allowed;
+    color: rgb(22,22,87,0.7);
+}
+
+/* ================= TEXTAREA ================= */
+
+.account-form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.5;
+    padding-top: 14px;
+}
+
+/* ================= FULL WIDTH ================= */
+
+.account-full-width {
+    grid-column: 1 / -1;
+}
+
+/* ================= BUTTON SECTION ================= */
+
+.account-form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+/* ================= BUTTONS ================= */
+
+.account-cancel-btn,
+.account-save-btn {
+    min-width: 140px;
+    height: 46px;
+    padding: 0 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* ================= CANCEL BUTTON ================= */
+
+.account-cancel-btn {
+    background: #ffffff;
+    border: 1px solid rgb(22,22,87,0.5);
+    color: rgb(22,22,87);
+}
+
+.account-cancel-btn:hover {
+    background: #f3f4f6;
+}
+
+/* ================= SAVE BUTTON ================= */
+
+.account-save-btn {
+    border: none;
+    color: white;
+    background: blue;
+    box-shadow: 0 4px 10px rgba(124,58,237,0.25);
+}
+
+.account-save-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(124,58,237,0.30);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+    .account-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .account-full-width {
+        grid-column: span 1;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+    .account-form-section {
+        padding: 20px;
+    }
+
+    .account-form-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .account-cancel-btn,
+    .account-save-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .account-form-section {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .account-form-section h3 {
+        font-size: 16px;
+    }
+
+    .account-form-group input,
+    .account-form-group select,
+    .account-form-group textarea {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,283 @@
+/* =================  Quotes.css  ================= */
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f6fa;
+
+}
+
+/* LAYOUT */
+.quotes-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* CONTENT */
+.quotes-container {
+    flex: 1;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+/* TABLE WRAPPER */
+.quotes-table-wrapper {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e6e8ec;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+}
+
+/* TABLE */
+.quotes-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.quotes-table thead {
+    background: #f8f9fb;
+}
+
+.quotes-table th {
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: rgb(22, 22, 87);
+    font-weight: 600;
+    border-bottom: 1px solid #e6e8ec;
+    white-space: nowrap;
+}
+
+.quotes-table td {
+    padding: 12px 14px;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(22, 22, 87);
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.first-col {
+    color: blue;
+}
+
+.quotes-table tbody tr:hover {
+    background: #fafafa;
+}
+
+/* STATUS BADGES */
+.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Draft */
+.status.Draft {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+/* Active */
+.status.Active {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+/* Won */
+.status.Won {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+/* Lost */
+.status.Lost {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Cancelled */
+.status.Canceled {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+/* ACTION BUTTONS */
+.actions-cell {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.edit-btn,
+.delete-btn {
+    width: 42px !important;
+    height: 42px !important;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-btn {
+    color: blueviolet;
+}
+
+.delete-btn {
+    color: #dc2626;
+}
+
+.edit-btn:hover {
+    background-color: white;
+}
+
+/* LOADING / EMPTY */
+.quotes-table td[colspan] {
+    text-align: center;
+    padding: 30px;
+    color: rgb(22, 22, 87);
+}
+
+.excel-btn {
+    color: rgb(67, 156, 67);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgb(67, 156, 67);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.excel-btn:hover {
+    transform: translateY(-1px);
+}
+
+.excel-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.quotes-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.quotes-right-action {
+    display: flex;
+    gap: 12px;
+}
+
+.quotes-search {
+    width: 300px;
+    padding: 10px 12px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.quotes-search:focus {
+    border-color: #2563eb;
+}
+
+.quotes-search-box {
+    position: relative;
+    display: inline-block;
+}
+
+.quotes-search-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color:rgb(22, 22, 87);
+    pointer-events: none;
+}
+
+
+.quotes-clear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    height: 42px;
+    padding: 0 16px;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    font-weight: 600 !important;
+    color: blue;
+    background: #e7e8e9;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .quotes-container {
+        padding: 15px;
+    }
+
+    .quotes-table {
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .quotes-container {
+        padding: 10px;
+    }
+
+    .quotes-table {
+        min-width: 700px;
+    }
+
+    .actions-cell {
+        flex-direction: column;
+    }
+
+    .quotes-toolbar {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .quotes-search-box {
+        width: 100%;
+    }
+
+    .quotes-search {
+        width: 100%;
+    }
+
+    .quotes-right-action {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    .quotes-left-action {
+        width: 100%;
+    }
+
+
+    .edit-btn,
+    .delete-btn {
+        width: 32px;
+        height: 32px;
+    }
+}

@@ -1,0 +1,151 @@
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f6fa;
+}
+
+/* ================= PAGE LAYOUT ================= */
+.contact-page-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================= MAIN CONTENT ================= */
+.contact-page-container {
+    flex: 1;
+    padding: 20px;
+    overflow-x: auto;
+    min-width: 0;
+}
+
+/* ================= TABLE WRAPPER ================= */
+.contact-table-wrapper {
+    background: #ffffff;
+    border: 1px solid #e6e8ec;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* ================= TABLE ================= */
+.contact-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.contact-table-wrapper thead {
+    background: #f8f9fb;
+}
+
+.contact-table-wrapper th {
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(22, 22, 87);
+    border-bottom: 1px solid #e6e8ec;
+    white-space: nowrap;
+}
+
+.contact-table-wrapper td {
+    padding: 12px 14px;
+    font-size: 14px;
+    color: rgb(22, 22, 87);
+    border-bottom: 1px solid #f1f1f1;
+    font-weight: 300;
+}
+
+.contact-table-wrapper tbody tr:hover {
+    background: #fafafa;
+}
+
+.first-col {
+    color: blue !important;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.contact-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-icon-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-edit-btn {
+    color: #6d28d9;
+}
+
+
+.contact-delete-btn {
+    color: #dc2626;
+}
+
+.contact-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.contact-table {
+    width: 100%;
+    min-width: 1100px;
+    border-collapse: collapse;
+}
+
+.contact-table th,
+.contact-table td {
+    white-space: nowrap;
+}
+
+.contact-page-container {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .contact-page-container {
+        padding: 15px;
+    }
+
+    .contact-table-wrapper table {
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page-container {
+        padding: 10px;
+    }
+
+    .contact-table-wrapper table {
+        min-width: 700px;
+    }
+
+    .contact-icon-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .contact-page-layout {
+        display: flex;
+        min-height: 100vh;
+    }
+}

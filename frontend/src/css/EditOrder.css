@@ -1,0 +1,406 @@
+/* =========================
+   LAYOUT
+========================= */
+* { box-sizing: border-box; }
+
+.order-edit-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+.order-edit-content {
+    flex: 1;
+    padding: 20px 24px;
+    overflow-y: auto;
+}
+
+/* =========================
+   CARD
+========================= */
+.order-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.order-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color:rgb(22,22,87);
+    margin: 0 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* =========================
+   FORM GRID — 2 per row
+========================= */
+.order-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 24px;
+}
+
+.order-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.order-form-group.col-span-2 {
+    grid-column: 1 / -1;
+}
+
+.order-form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(22,22,87);
+}
+
+.order-form-group input,
+.order-form-group select,
+.order-form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+    color: rgb(22,22,87);
+    transition: 0.2s;
+}
+
+.order-form-group input:focus,
+.order-form-group select:focus {
+    border-color: rgb(22,22,87);
+    box-shadow: 0 0 0 3px rgba(109,40,217,0.10);
+}
+
+.order-form-group input:disabled {
+    background: #f9fafb;
+    color: rgb(22,22,87);
+    cursor: not-allowed;
+}
+
+/* =========================
+   PRODUCTS TABLE
+========================= */
+.order-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.order-section-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #111827;
+}
+
+.order-add-btn {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.order-add-btn:hover { background: #5b21b6; }
+
+.order-products-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.order-products-table th {
+    background: #f1f5f9;
+    padding: 12px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(22,22,87);
+}
+
+.order-products-table td {
+    padding: 12px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: rgb(22,22,87);
+}
+
+.order-products-table tbody tr:hover { background: #faf7ff; }
+
+.order-no-data {
+    text-align: center;
+    padding: 24px;
+    color: rgb(22,22,87);
+}
+
+/* table action buttons */
+.order-table-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.order-icon-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+    background: transparent;
+}
+
+.order-icon-btn.edit  { color: #6d28d9; }
+.order-icon-btn.edit:hover  { background: #ede9fe; }
+.order-icon-btn.delete { color: #dc2626; }
+.order-icon-btn.delete:hover { background: #fee2e2; }
+
+/* =========================
+   AMOUNT SUMMARY
+========================= */
+.order-summary-section {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.order-summary-card {
+    flex: 1;
+    min-width: 160px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    text-align: center;
+    border: 1px solid #e5e7eb;
+}
+
+.order-summary-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(22,22,87);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.order-summary-card p {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color:rgb(22,22,87);
+}
+
+.order-grand-total-card {
+    background: #f8f5ff;
+    border: 2px solid rgb(22,22,87);
+}
+
+.order-grand-total-card p { color:rgb(22,22,87); }
+
+/* =========================
+   FORM ACTIONS
+   FIX: justify-content: space-between so left buttons
+   sit on the left and Cancel/Update sit on the right
+========================= */
+.order-form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* Left-side action buttons: Create Invoice, Close Order, Generate PDF */
+.order-modal-actions-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.order-modal-actions-left button {
+    padding: 10px 16px;
+    background: #fff;
+    border: 1px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.gen-pdf{
+    color: blue;
+
+}
+
+.create-in{
+    color: green;
+}
+
+.close-order{
+    color: red;
+}
+
+
+.order-modal-actions-left button:hover {
+    background: #ede9fe;
+}
+
+.order-save-btn {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 11px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+
+.order-cancel-btn {
+    background: #e5e7eb;
+    color: rgb(22,22,87);
+    border: 1px solid rgb(22,22,87,0.5);
+    padding: 11px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.order-modal {
+    width: 600px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.order-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    background: #f8f9fb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.order-modal-header h3 {
+    margin: 0;
+    font-size: 17px;
+    color: #111827;
+}
+
+.order-modal-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color:rgb(22,22,87);
+    line-height: 1;
+}
+
+.order-modal-body {
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.order-modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.order-modal-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color:rgb(22,22,87);
+}
+
+.order-modal-field input,
+.order-modal-field select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    color: rgb(22,22,87);
+    transition: 0.2s;
+}
+
+.order-modal-field input:focus,
+.order-modal-field select:focus {
+    border-color:rgb(22,22,87);
+    box-shadow: 0 0 0 3px rgba(109,40,217,0.10);
+}
+
+.order-modal-row-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.order-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 16px 22px;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .order-edit-content { padding: 14px; }
+    .order-form-grid { grid-template-columns: 1fr; }
+    .order-form-group.col-span-2 { grid-column: span 1; }
+    .order-summary-section { flex-direction: column; }
+    .order-form-actions { flex-direction: column; align-items: stretch; }
+    .order-modal-actions-left { flex-wrap: wrap; }
+    .order-modal-actions-left button,
+    .order-save-btn,
+    .order-cancel-btn { width: 100%; text-align: center; }
+    .order-modal { width: 95%; }
+    .order-modal-row-double { grid-template-columns: 1fr; }
+}

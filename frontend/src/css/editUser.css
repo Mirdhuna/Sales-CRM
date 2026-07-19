@@ -1,0 +1,197 @@
+/* ========================================
+   EDIT USER PAGE LAYOUT
+======================================== */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* ========================================
+   FORM WRAPPER
+======================================== */
+
+.form {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.form h2 {
+    margin: 0 0 25px;
+    color: #1f2937;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-bottom: 2px solid #eef2ff;
+    padding-bottom: 15px;
+}
+
+/* ========================================
+   GRID LAYOUT
+======================================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Make full width fields span */
+.grid > div:nth-child(9),
+.grid > div:nth-child(10) {
+    grid-column: span 2;
+}
+
+/* ========================================
+   FORM ELEMENTS
+======================================== */
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(22,22,87);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input,
+select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color:rgb(22,22,87);
+    background: #ffffff;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4f46e5;
+    cursor: pointer;
+}
+
+/* ========================================
+   PASSWORD FIELD (optional improvement)
+======================================== */
+
+input[type="password"] {
+    letter-spacing: 1px;
+}
+
+/* ========================================
+   BUTTON AREA
+======================================== */
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    min-width: 140px;
+    height: 48px;
+    border: none;
+    font-size: 14px !important;
+    border-radius: 10px;
+    font-weight: 600 !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* Primary */
+.btn-primary {
+    background: #4f46e5;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+/* Secondary */
+.btn-secondary {
+    background: #f3f4f6;
+    color: rgb(22,22,87) !important;
+    border: 1px solid rgb(22,22,87,0.5) !important;
+}
+
+.btn-secondary:hover {
+    background: #e5e7eb;
+}
+
+/* ========================================
+   LOADING STATE
+======================================== */
+
+.loading {
+    text-align: center;
+    padding: 60px;
+    font-size: 1rem;
+    color:rgb(22,22,87);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .form {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .form {
+        padding: 20px 15px;
+    }
+
+    .form h2 {
+        font-size: 1.4rem;
+    }
+}

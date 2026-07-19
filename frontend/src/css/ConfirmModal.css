@@ -1,0 +1,128 @@
+.confirm-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.confirm-modal {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 32px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* ── Icon base — NO color or background here ── */
+.confirm-modal-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    font-size: 22px;
+}
+
+/* ── Icon variants ── */
+.confirm-icon-red {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.confirm-icon-purple {
+    background: #ede9fe;
+    color: #13a713;
+}
+
+
+.confirm-modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.confirm-modal-message {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.confirm-modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.confirm-modal-cancel-btn {
+    padding: 10px 28px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.confirm-modal-cancel-btn:hover {
+    background: #f3f4f6;
+}
+
+.confirm-modal-delete-btn {
+    padding: 10px 28px;
+    border-radius: 8px;
+    border: none;
+    background: #ef4444;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.confirm-modal-delete-btn:hover {
+    background: #dc2626;
+}
+
+.confirm-modal-paid-btn {
+    padding: 10px 28px;
+    border-radius: 8px;
+    border: none;
+    background: #6d28d9;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.confirm-modal-paid-btn:hover {
+    background: #5b21b6;
+}
+
+
+.confirm-modal-won-btn {
+    padding: 10px 28px;
+    border-radius: 8px;
+    border: none;
+    background:rgb(1, 146, 1);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.confirm-modal-won-btn:hover {
+    background:green;
+}
+

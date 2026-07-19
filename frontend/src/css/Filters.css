@@ -1,0 +1,146 @@
+/* ================= FILTER BAR ================= */
+.filters-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* ================= SEARCH BOX ================= */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(22,22,87);
+    padding: 0px 12px;
+    width: 180px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+
+    min-width: 180px;
+    max-width: 180px;
+    height: 47px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    background: transparent;
+}
+
+/* ================= DROPDOWNS ================= */
+.filters-container select {
+    flex: 1;
+    min-width: 180px;
+    max-width: 180px;
+    height: 42px;
+
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color:rgb(22,22,87);
+    background: #fff;
+}
+
+/* ================= ACTIONS ================= */
+.filters-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin-left: auto;
+}
+
+.filters-right-action,.filters-left-action{
+    display: flex;
+    gap:12px;
+
+}
+
+/* ================= BUTTONS ================= */
+.clear-btn,
+.add-btn,
+.export-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    height: 42px;
+    padding: 0 16px;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    font-weight: 600 !important;
+
+}
+
+.export-btn{
+    color: rgb(67, 156, 67);
+}
+
+.clear-btn {
+    background: #e7e8e9;
+    color: blue;
+}
+
+.add-btn {
+    background: #6d28d9;
+    color: white;
+}
+
+.export-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+/* ================= HOVER ================= */
+.add-btn:hover,
+.export-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .filters-container {
+        flex-wrap: wrap;
+    }
+
+    .search-box,
+    .filters-container select {
+        flex: 1 1 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .filters-action{
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .filters-right-action{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    .filters-left-action{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}

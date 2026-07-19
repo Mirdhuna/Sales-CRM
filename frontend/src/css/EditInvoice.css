@@ -1,0 +1,511 @@
+/* ============================================================
+   EditInvoice.css
+   All classes use the "inv-" prefix to avoid colliding with
+   other pages (Contact.css, Accounts.css, EditOrder.css, etc.)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* ── Layout ── */
+.inv-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6fb;
+    font-family:  sans-serif;
+}
+
+.inv-content {
+    flex: 1;
+    padding: 24px 32px 48px;
+    overflow-y: auto;
+}
+
+.inv-loading {
+    padding: 24px;
+    color:rgb(22,22,87);
+    font-size: 15px;
+}
+
+/* ── Card ── */
+.inv-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ── Section title ── */
+.inv-section-title {
+    font-size: 15px;
+    font-weight: 600;
+    color:rgb(22,22,87);
+    margin: 0 0 18px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* ── Section header (title + add button on same line) ── */
+.inv-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* ── 2-column form grid ── */
+.inv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+}
+
+.inv-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.inv-field label {
+    font-size: 14px;
+    font-weight: 700;
+    color:rgb(22,22,87);
+}
+
+.inv-field input,
+.inv-field select {
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: rgb(22,22,87);
+    background: #fff;
+    outline: none;
+    transition: border 0.15s;
+}
+
+.inv-field input:focus,
+.inv-field select:focus {
+    border-color:rgb(22,22,87);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.inv-field input:disabled {
+    background: #f9fafb;
+    color: rgb(22,22,87);
+    cursor: not-allowed;
+}
+
+/* span full row */
+.inv-col-span-2 {
+    grid-column: span 2;
+}
+
+/* ── Add Product button ── */
+.inv-add-btn {
+    height: 36px;
+    padding: 0 16px;
+    background:blue;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+
+/* ── Products table ── */
+.inv-table-wrap {
+    overflow-x: auto;
+}
+
+.inv-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+}
+
+.inv-table thead tr {
+    background: #f5f3ff;
+}
+
+.inv-table th {
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(22,22,87);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.inv-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #f3f4f6;
+    color: rgb(22,22,87);
+}
+
+.inv-table tbody tr:hover {
+    background: #fafafa;
+}
+
+.inv-no-data {
+    text-align: center;
+    color: rgb(22,22,87);
+    padding: 28px 0 !important;
+    font-style: italic;
+}
+
+/* ── Table action buttons ── */
+.inv-table-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.inv-icon-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: background 0.15s;
+}
+
+.inv-icon-btn.edit {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.inv-icon-btn.edit:hover {
+    background: #ddd6fe;
+}
+
+.inv-icon-btn.delete {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.inv-icon-btn.delete:hover {
+    background: #fecaca;
+}
+
+/* ── Summary row ── */
+.inv-summary-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.inv-summary-card {
+    flex: 1;
+    min-width: 130px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.inv-summary-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(22,22,87);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.inv-summary-value {
+    font-size: 17px;
+    font-weight: 700;
+    color: rgb(22,22,87);
+}
+
+.inv-grand-total {
+    border-color:rgb(22,22,87);
+}
+
+.inv-grand-total .inv-summary-label,
+.inv-grand-total .inv-summary-value {
+    color:rgb(22,22,87);
+}
+
+/* ── Form actions (Cancel / Update) ── */
+.inv-form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.inv-left-actions,
+.inv-right-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.inv-close-btn {
+    height: 40px;
+    padding: 0 22px;
+    border: 1px solid green;
+    color:green;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-weight: 500;
+    font-family:  sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.inv-pdf-btn {
+    height: 40px;
+    padding: 0 22px;
+    border: 1px solid blue;
+    color:blue;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-weight: 500;
+    font-family:  sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+
+.inv-close-cancel-btn {
+    height: 40px;
+    padding: 0 22px;
+    border: 1px solid red;
+    color:red;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-weight: 500;
+    font-family:  sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.inv-cancel-btn {
+    height: 40px;
+    padding: 0 22px;
+    border: 1px solid rgb(22,22,87,0.5);
+    border-radius: 8px;
+    background: #fff;
+    color:rgb(22,22,87);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+
+
+.inv-save-btn {
+    height: 40px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 8px;
+    background:blue;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family:  sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+/* ── Modal overlay ── */
+.inv-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* ── Modal box ── */
+.inv-modal {
+    background: #fff;
+    border-radius: 14px;
+    width: 480px;
+    max-width: 95vw;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    animation: inv-modal-in 0.18s ease;
+}
+
+@keyframes inv-modal-in {
+    from {
+        transform: translateY(-16px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.inv-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.inv-modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(22,22,87);
+}
+
+.inv-modal-close {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #f3f4f6;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    color:rgb(22,22,87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background 0.15s;
+}
+
+.inv-modal-close:hover {
+    background: #e5e7eb;
+}
+
+.inv-modal-body {
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.inv-modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.inv-modal-field label {
+    font-size: 13px;
+    font-weight: 500;
+    color:rgb(22,22,87);
+}
+
+.inv-modal-field input,
+.inv-modal-field select {
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family:  sans-serif;
+    color: rgb(22,22,87);
+    background: #fff;
+    outline: none;
+    transition: border 0.15s;
+}
+
+.inv-modal-field input:focus,
+.inv-modal-field select:focus {
+    border-color: rgb(22,22,87);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.inv-modal-row-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.inv-required {
+    color: #ef4444;
+    margin-left: 2px;
+}
+
+/* Live line total preview */
+.inv-modal-line-total {
+    background: #f5f3ff;
+    border: 1px solid #ede9fe;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    color: #4b5563;
+    text-align: right;
+}
+
+.inv-modal-line-total strong {
+    color:rgb(22,22,87);
+    font-size: 15px;
+}
+
+.inv-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 16px 22px;
+    border-top: 1px solid #f0f0f0;
+    background: #fafafa;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .inv-content {
+        padding: 16px;
+    }
+
+    .inv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inv-col-span-2 {
+        grid-column: span 1;
+    }
+
+    .inv-summary-row {
+        flex-direction: column;
+    }
+
+    .inv-modal-row-double {
+        grid-template-columns: 1fr;
+    }
+
+    .inv-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .inv-cancel-btn,
+    .inv-save-btn,.inv-close-btn,.inv-pdf-btn,.inv-close-cancel-btn{
+        width: 100%;
+        
+    }
+}

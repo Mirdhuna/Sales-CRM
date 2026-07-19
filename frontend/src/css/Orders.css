@@ -1,0 +1,268 @@
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(210, 20%, 98%);
+}
+
+/* ================= LAYOUT ================= */
+.orders-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ================= CONTENT AREA ================= */
+.orders-top {
+    flex: 1;
+    min-width: 0;
+    padding: 20px 24px;
+    overflow-x: hidden;
+}
+
+/* ================= TITLE ================= */
+.orders-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #111827;
+}
+
+/* ================= TABLE WRAPPER ================= */
+.orders-table-wrapper {
+    background: white;
+    border-radius: 14px;
+    overflow-x: auto;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+
+/* ================= TABLE ================= */
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1100px;
+}
+
+/* HEADER */
+.orders-table thead {
+    background: #f8fafc;
+}
+
+.orders-table th {
+    padding: 14px 16px;
+    text-align: left;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(22, 22, 87);
+
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+/* BODY */
+.orders-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: rgb(22, 22, 87);
+    font-weight: 350;
+    border-bottom: 1px solid #f1f5f9;
+    white-space: nowrap;
+}
+
+.orders-table tbody tr {
+    transition: 0.2s ease;
+}
+
+.orders-table tbody tr:hover {
+    background-color: #faf7ff;
+}
+
+/* ================= STATUS BADGES ================= */
+.status {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.active {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status.won {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status.lost {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.status.canceled {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-btn {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.icon-btn.edit {
+    color: blueviolet;
+    background: white;
+}
+
+
+.icon-btn.delete {
+    color: #dc2626;
+}
+
+
+/* ================= EMPTY STATE ================= */
+.no-data {
+    text-align: center;
+    padding: 25px;
+    color: rgb(22, 22, 87);
+}
+
+.excel-btn {
+    color: rgb(67, 156, 67);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgb(67, 156, 67);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.excel-btn:hover {
+    transform: translateY(-1px);
+}
+
+.excel-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.orders-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.orders-search {
+    width: 300px;
+    padding: 10px 12px 10px 40px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    outline: none;
+}
+
+.orders-search:focus {
+    border-color: #2563eb;
+}
+
+.orders-right-action{
+    display: flex;
+    gap:12px;
+}
+
+.orders-search-box{
+    position: relative;
+    display: inline-block;
+}
+
+.orders-search-icon{
+    position:absolute;
+    color: rgb(22, 22, 87);
+    top:50%;
+    left:12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.orders-clear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    height: 42px;
+    padding: 0 16px;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    font-weight: 600 !important;
+    color: blue;
+    background: #e7e8e9;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .orders-top {
+        padding: 14px;
+    }
+
+    .excel-btn {
+        width: 100%;
+    }
+
+    .orders-toolbar {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .orders-search-box{
+        width: 100%;
+    }
+
+    .orders-right-action{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    .orders-left-action{
+        width: 100%;
+    }
+
+    .orders-search {
+        width: 100%;
+    }
+}

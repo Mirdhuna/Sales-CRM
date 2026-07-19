@@ -1,0 +1,445 @@
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+.quote-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+.quote-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.quote-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+.quote-card h2,
+.quote-card h3 {
+    margin-bottom: 20px;
+    color:rgb(22,22,87);
+}
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: rgb(22,22,87);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.form-grid input,
+.form-grid select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-grid input:focus,
+.form-grid select:focus {
+    border-color: #2563eb;
+}
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h3 {
+    margin: 0;
+}
+
+.add-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.add-btn:hover {
+    background: #1d4ed8;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.products-table th {
+    background: #f1f5f9;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.products-table td {
+    padding: 12px;
+    border-top: 1px solid #eee;
+}
+
+.products-table tr:hover {
+    background: #fafafa;
+}
+
+.products-table button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.products-table button:first-child {
+    color: blueviolet;
+}
+
+.products-table button:last-child {
+    color: #dc2626;
+}
+
+/* =========================
+   AMOUNT SUMMARY
+========================= */
+
+.amount-summary-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    flex: 1;
+    min-width: 180px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.summary-card h4 {
+    margin-bottom: 10px;
+    color:rgb(22,22,87);
+    font-size: 14px;
+}
+
+.summary-card p {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.grand-total-card {
+    background: #f8f5ff;
+    border: 2px solid rgb(22,22,87);
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.q-form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.q-status-buttons,
+.q-action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.create-o-btn {
+    background: white;
+    color: #16a34a;
+    border: 1px solid #16a34a;
+    padding: 14px 26px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.close-btn {
+    background: white;
+    color: #dc2626;
+    border: 1px solid #dc2626;
+    padding: 14px 26px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.generate-btn {
+    background: white;
+    color: blue;
+    border: 1px solid  blue;
+    padding: 14px 26px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.cancel-btn {
+    color:rgb(22,22,87);
+    border: 1px solid rgb(22,22,87);
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.qt-save-btn {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color:rgb(22,22,87);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+}
+
+
+/* =========================
+   PRODUCT MODAL
+========================= */
+/* =========================
+   MODAL OVERLAY
+========================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* =========================
+   PRODUCT MODAL
+========================= */
+
+.product-modal {
+    width: 700px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Header */
+
+.product-modal h3 {
+    margin: 0;
+    padding: 22px 25px;
+    font-size: 28px;
+    font-weight: 600;
+    background: #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Form Elements */
+
+.product-modal select,
+.product-modal input {
+    width: calc(100% - 50px);
+    margin: 15px 25px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Quantity + Price side by side */
+.product-modal input[type="number"] {
+    width: calc(50% - 37px);
+    display: inline-block;
+    margin: 10px 12px;
+}
+
+/* first number input starts properly */
+.product-modal input[type="number"]:nth-of-type(2),
+.product-modal input[type="number"]:nth-of-type(4) {
+    margin-left: 25px;
+}
+
+/* Footer */
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px 25px;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 20px;
+}
+
+.modal-actions button:first-child {
+    color:rgb(22,22,87);
+    border: 1px solid rgb(22,22,87,0.5);
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+.modal-actions button:last-child {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+
+/*for the bc*/
+.bc-link {
+    color: #5a3df0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.bc-link:hover {
+    text-decoration: underline;
+}
+
+.bc-separator {
+    color:rgb(22,22,87);
+    font-size: 16px;
+}
+
+.bc-current {
+    color: rgb(22,22,87);
+    font-weight: 600;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .q-form-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .qt-save-btn,
+    .q-status-buttons,
+    .q-action-buttons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .amount-summary-section {
+        flex-direction: column;
+    }
+
+    .summary-card {
+        min-width: 100%;
+    }
+
+    .product-modal {
+        width: 95%;
+        max-height: 90vh;
+        overflow-y:auto;
+    }
+
+    .product-modal input[type="number"] {
+        width: calc(100% - 50px);
+        margin: 12px 25px;
+    }
+}

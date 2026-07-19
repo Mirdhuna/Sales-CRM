@@ -1,0 +1,434 @@
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(210, 20%, 98%);
+}
+
+/* ================= LAYOUT ================= */
+.leads-layout,
+.lead-form-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: hsl(210, 20%, 98%);
+}
+
+/* ================= CONTENT ================= */
+.leads-container {
+    flex: 1;
+    padding: 20px 24px;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+/* FORM PAGE */
+.lead-form-container {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+/* ================= TOP SECTION ================= */
+.leads-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* ================= SEARCH ================= */
+.leads-search {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #dbe2ea;
+    font-size: 14px;
+    background: white;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.leads-search:focus {
+    border-color: blueviolet;
+    box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.1);
+}
+
+/* ================= ADD BUTTON ================= */
+.leads-add-btn {
+    border: none;
+    background: blueviolet;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.leads-add-btn:hover {
+    transform: scale(1.03);
+    background: rgb(121, 46, 192);
+}
+
+/* ================= TABLE ================= */
+.leads-table-wrapper {
+    width: 100%;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    -webkit-overflow-scrolling: touch;
+}
+
+.leads-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1200px;
+}
+
+.leads-table thead {
+    background: #f8fafc;
+}
+
+.leads-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(22, 22, 87);
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+.leads-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: rgb(22, 22, 87);
+    font-weight: 350;
+    border-bottom: 1px solid #f1f5f9;
+    white-space: nowrap;
+}
+
+.leads-table tbody tr {
+    transition: 0.2s ease;
+}
+
+.leads-table tbody tr:hover {
+    background-color: #faf7ff;
+}
+
+/* ================= STATUS BADGES ================= */
+.status-badge {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-new {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-qualified {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.status-negotiation {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status-closed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background: transparent;
+}
+
+.icon-btn.edit {
+    color: blueviolet !important;
+}
+
+.icon-btn.edit svg {
+    color: blueviolet !important;
+}
+
+.icon-btn.delete {
+    color: #dc2626;
+}
+
+.icon-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* ================= FORM CARD ================= */
+.lead-form {
+    width: 100%;
+    max-width: 1000px;
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= FORM TITLE ================= */
+.form-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(22, 22, 87);
+    margin-bottom: 30px;
+}
+
+/* ================= FORM SECTION ================= */
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: blueviolet;
+    margin-bottom: 18px;
+}
+
+/* ================= GRID ================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* ================= FORM FIELD ================= */
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color:rgb(22, 22, 87);
+    margin-bottom: 8px;
+}
+
+/* ================= INPUTS ================= */
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    background: white;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: blueviolet;
+    box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.1);
+}
+
+.form-field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ================= BUTTON AREA ================= */
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.cancel-btn,
+.save-btn {
+    min-width: 120px;
+    height: 42px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.save-btn {
+    background: blueviolet;
+    color: white;
+}
+
+.save-btn:hover {
+    background: rgb(121, 46, 192);
+}
+
+.save-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.leads-table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.leads-table-wrapper::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 10px;
+}
+
+.leads-table-wrapper::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+/* ================= QUALIFY / DISQUALIFY ================= */
+.QD-btn {
+    display: flex;
+    gap: 12px;
+}
+
+.Qf,
+.Df {
+    min-width: 140px;
+    height: 42px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.Qf {
+    background-color: #16a34a;
+}
+
+.Df {
+    background-color: #dc2626;
+}
+
+/* ================= MISC ================= */
+.first-col {
+    color: blue;
+}
+
+.no-data {
+    text-align: center;
+    padding: 25px;
+    color: rgb(22, 22, 87);
+}
+
+.rating-hot {
+    color: red;
+}
+
+.rating-cold {
+    color: blue;
+}
+
+.rating-warm {
+    color: orange;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+
+    .leads-container {
+        flex: 1;
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .leads-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .leads-container,
+    .lead-form-container {
+        padding: 15px;
+    }
+
+    .lead-form {
+        padding: 20px;
+    }
+
+    .leads-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .leads-search {
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+
+    .QD-btn {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .Qf,
+    .Df {
+        width: 100%;
+    }
+}
